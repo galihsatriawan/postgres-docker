@@ -2,7 +2,7 @@ version: '3'
 
 services:
   postgresql-wal2json:
-    image: galihsatriawan/postgres-wal2json:wal2json-0.0.1
+    image: galihsatriawan/postgres-wal2json:wal2json-0.0.2
     container_name: pg-docker-with-wal2json
     ports:
       - "5400:5432"
