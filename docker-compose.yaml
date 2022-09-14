@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  postgresql-wal2json:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pg-docker
+    ports:
+      - "5400:5432"
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    restart: always
