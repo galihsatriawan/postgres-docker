@@ -2,10 +2,8 @@ version: '3'
 
 services:
   postgresql-wal2json:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: pg-docker
+    image: galihsatriawan/postgres-wal2json:wal2json-0.0.1
+    container_name: pg-docker-with-wal2json
     ports:
       - "5400:5432"
     environment:
